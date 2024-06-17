@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.h2-title {
+ font-size: rem(15);
+ line-height: calc(24 / 15);
+ font-weight: $bold;
+ @include mq(md) {
+    font-size: rem(28);
+    line-height: calc(28 / 28);
+ }   
+}
+
+.h3-title {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    font-weight: $bold;
+    border-bottom: rem(1) solid $blue;
+    padding-bottom: rem(10);
+    margin-top: rem(50);
+    @include mq(md) {
+        font-size: rem(24);
+        line-height: calc(24 / 24);
+        margin-top: rem(80);
+    }
+}
+
+.author {
+    border-bottom: rem(1) solid $black;
+}

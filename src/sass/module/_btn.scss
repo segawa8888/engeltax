@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0 rem(15.5);
+    background-color: $light;
+    padding:rem(13) 0 rem(11.2) 0;
+    width: 100%;
+    color: $blue;
+    font-size: rem(18);
+    img {
+        width:rem(17.5);
+    }
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
+.btn-inquiry {
+    display: block;
+    width: 100%;
+    margin-top: rem(20);
+    @include mq(md) {
+        max-width: rem(550);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: rem(16);
+    }
+}

@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.p-text {
+    font-size: rem(14);
+    line-height: calc(20 / 14);
+    font-weight: $regular;
+    margin-top: rem(20);
+    @include mq(md) {
+        margin-top: rem(30);
+        line-height: calc(28 / 14);
+    }
+    span {
+        font-size: rem(20);
+        font-weight: bold;
+    }
+}
+
+.p-text02 {
+    font-size: rem(14);
+    line-height: calc(20 / 14);
+    font-weight: $regular;
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(50);
+        line-height: calc(28 / 14);
+    }
+
+    a {
+        color: $blue;
+    }
+
+    span {
+        margin-top: rem(12);
+        font-size: rem(16);
+        line-height: calc(28 / 16);
+        font-weight: $regular;
+        @include mq(md) {
+            margin-top: rem(17);
+            font-size: rem(20);
+            line-height: calc(28 / 20);
+        }
+    }
+}
+
+.prev-text {
+    font-size: rem(14);
+    line-height: calc(20 / 14);
+    font-weight: $bold;
+    margin-top: rem(35);
+    display: block;
+    @include mq(md) {
+        margin-top: rem(28);
+    }
+}
+
+.p-center {
+    display: none;
+    @include mq(md) {
+        display: block;
+        margin-top: rem(50);
+    }
+}

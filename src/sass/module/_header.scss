@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.header {
+    width: 100%;
+    padding:rem(17);
+    border-bottom: rem(2) solid $blue;
+    @include mq(md) {
+        border-bottom:initial;
+        padding:rem(30) rem(50) rem(30) rem(40);
+    }
+}
+
+.header-inner {
+    display: flex;
+    justify-content: right;
+    @include mq(md) {
+        justify-content: space-between;
+    }
+}
+
+.header-title {
+    margin-top:calc(30/390*100vw);
+    font-size: rem(18);
+    line-height:1.5;
+    border-bottom: rem(3.22) solid $blue;
+    max-width: calc(368/390*100vw);
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: rem(6.88);
+    span {
+        color: $blue;
+    }
+    small {
+        font-size: rem(17.55);
+        @include mq(md) {
+            font-size: rem(24.62);
+        }
+    }
+    @include mq(md) {
+        margin-top: initial;
+        margin-left: initial;
+        max-width: initial;
+        font-size: rem(28.72);
+        padding-bottom: initial;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap:0 rem(20);
+    @include mq(md) {
+        gap:0 rem(28);
+    }
+}
+
+.header-select {
+    display: flex;
+    align-items: center;
+    a {
+    position: relative;
+    font-size: rem(12);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+        &::before {
+            content:url(/images/common/angle-right.png);
+            position: absolute;
+            top: 0;
+            left:rem(-10.3);
+            width:rem(5);
+            height:rem(5);
+            @include mq(md) {
+                width:rem(8.8);
+                height:rem(8.8);
+                left:rem(-18);
+            }
+        }
+    }
+}
+
+.header-contact {
+    max-width:calc(136 / 390 * 100vw);
+    @include mq(md) {
+        max-width: rem(170);
+    }
+}
